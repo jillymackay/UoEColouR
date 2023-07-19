@@ -5,7 +5,7 @@
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments passed to discrete_scale() or
 #'            scale_color_gradientn(), used respectively when discrete is TRUE or FALSE
-#'
+#' @export
 
 
 scale_colour_uoe <- function(palette = "bright", discrete = TRUE, reverse = FALSE, ...) {

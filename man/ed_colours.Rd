@@ -3,7 +3,7 @@
 \docType{data}
 \name{ed_colours}
 \alias{ed_colours}
-\title{University of Edinburgh corporate colours}
+\title{University of Edinburgh Brand Colours}
 \format{
 An object of class \code{character} of length 25.
 }
@@ -11,6 +11,15 @@ An object of class \code{character} of length 25.
 ed_colours
 }
 \description{
-University of Edinburgh corporate colours
+A collection of colour palettes sourced from the University of Edinburgh Brand Colour Palette
+}
+\examples{
+# Generate a plot using the default Edinburgh Bright palette
+library(ggplot2)
+ggplot(aes(x = hwy, y = cty, colour = manufacturer ), data = mpg) +
+  geom_point() +
+  scale_colour_uoe()
+
+
 }
 \keyword{datasets}
