@@ -27,4 +27,9 @@ ggplot(aes(x = manufacturer, fill = manufacturer), data = mpg) +
   scale_fill_uoe(palette = "muted")
 
 
-see_palette("bright-two-tone")
+ggplot(aes(x = manufacturer, fill = manufacturer), data = mpg) +
+  geom_bar() +
+  scale_fill_uoe(palette = "bright-two-tone")
+
+
+uoe_show_palette("bright-two-tone")

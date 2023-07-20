@@ -2,20 +2,36 @@
 % Please edit documentation in R/uoe_scale.R
 \name{scale_fill_uoe}
 \alias{scale_fill_uoe}
-\title{Fill scale constructor for UoE branding colours}
+\title{Creates a University of Edinburgh fill scale for ggplot2}
 \usage{
-scale_fill_uoe(palette = "bright", discrete = TRUE, reverse = FALSE, ...)
+scale_fill_uoe(
+  palette = "bright",
+  discrete = TRUE,
+  alpha = 1,
+  reverse = FALSE,
+  ...
+)
 }
 \arguments{
-\item{palette}{Character name of palette in ed_palettes}
+\item{palette}{Choose from 'ed_palettes' list}
 
-\item{discrete}{Boolean indicating whether color aesthetic is discrete or not}
+\item{discrete}{whether to use a discrete colour palette}
 
-\item{reverse}{Boolean indicating whether the palette should be reversed}
+\item{alpha}{The alpha transparency, a number in [0,1], see argument alpha in
+\code{\link[grDevices]{hsv}}.}
 
-\item{...}{Additional arguments passed to discrete_scale() or
-scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE}
+\item{reverse}{If TRUE, the direction of the colours is reversed.}
+
+\item{...}{additional arguments to pass to scale_color_gradientn}
 }
 \description{
-Fill scale constructor for UoE branding colours
+Creates a University of Edinburgh fill scale for ggplot2
+}
+\examples{
+library(ggplot2)
+library(UoEColouR)
+
+ggplot(aes(x = manufacturer, fill = manufacturer), data = mpg) +
+  geom_bar() +
+  scale_fill_uoe()ggplot(diamonds)
 }

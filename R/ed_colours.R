@@ -24,14 +24,14 @@ ed_palettes <- list(#Edinburgh University Brand Colour Palettes
                "#c25e03",
                "#f9a800",
                "#61bf1a",
-               "#0099ab",
-               "#29c2de"),
+               "#29c2de",
+               "#0099ab"),
   # A selection of the bright palette intended to work for dichotomous scales
   "bright-two-tone" = c("#830065",
                         "#d0006f",
                         "#f9a800",
-                        "#0099ab",
-                        "#29c2de"),
+                        "#29c2de",
+                        "#0099ab"),
   # Note the muted palette is not great for colour blind folk
   "muted" = c("#154734",
               "#004f71",
@@ -42,11 +42,11 @@ ed_palettes <- list(#Edinburgh University Brand Colour Palettes
               "#704f45",
               "#692e1f"),
   # A selection of the muted palette intended to work for dichotomous scales
-  "muted-two-tone"= c("#004f71",
-                      "#c6dbe9",
+  "muted-two-tone"= c("#154734",
                       "#949108",
+                      "#c6dbe9",
                       "#ba8285",
-                      "#692e1f"),
+                      "#704f45"),
   # Colours optimised for online display per brand guidelines, some poor colourblind choices
   "digital" = c("#a50034",
                 "#d0006f",
@@ -65,7 +65,7 @@ ed_palettes <- list(#Edinburgh University Brand Colour Palettes
                    "#4a7875",
                    "#c6dbe9"),
   # Recruitment branding with core colours, use with caution, core colours are valuable
-  "recuit-ug-core" = c("#d50032",
+  "recruit-ug-core" = c("#d50032",
                   "#c25e03",
                   "#61bf1a",
                   "#f9a800",

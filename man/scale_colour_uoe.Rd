@@ -2,20 +2,36 @@
 % Please edit documentation in R/uoe_scale.R
 \name{scale_colour_uoe}
 \alias{scale_colour_uoe}
-\title{Color scale constructor for UoE branding colors}
+\title{Creates a University of Edinburgh colour scale for ggplot2}
 \usage{
-scale_colour_uoe(palette = "bright", discrete = TRUE, reverse = FALSE, ...)
+scale_colour_uoe(
+  palette = "bright",
+  discrete = TRUE,
+  alpha = 1,
+  reverse = FALSE,
+  ...
+)
 }
 \arguments{
-\item{palette}{Character name of palette in ed_palettes}
+\item{palette}{Choose from 'ed_palettes' list}
 
-\item{discrete}{Boolean indicating whether color aesthetic is discrete or not}
+\item{discrete}{whether to use a discrete colour palette}
 
-\item{reverse}{Boolean indicating whether the palette should be reversed}
+\item{alpha}{transparency}
 
-\item{...}{Additional arguments passed to discrete_scale() or
-scale_color_gradientn(), used respectively when discrete is TRUE or FALSE}
+\item{reverse}{logical, Reverse the order of the colours?}
+
+\item{...}{additional arguments to pass to scale_color_gradientn}
 }
 \description{
-Color scale constructor for UoE branding colors
+Creates a University of Edinburgh colour scale for ggplot2
+}
+\examples{
+library(ggplot2)
+library(UoEColouR)
+
+ggplot(mpg) +
+ geom_point(aes(x = hwy, y = cty, color = manufacturer)) +
+ scale_color_uoe("bright")
+
 }

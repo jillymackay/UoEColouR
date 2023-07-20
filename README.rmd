@@ -11,7 +11,7 @@ A package of University of Edinburgh branded colours
 
 
 
-Edinburgh brand colours taken from our [Sharepoint](https://uoe.sharepoint.com/sites/Brand/SitePages/Colours.aspx). I encourage any users to thoroughly read and understand brand guidance prior to utilising Edinburgh colours.
+Edinburgh brand colours taken from our [Sharepoint](https://uoe.sharepoint.com/sites/Brand/SitePages/Colours.aspx). I encourage any users to thoroughly read and understand brand guidance prior to utilising Edinburgh colours. Namely, utilise these colours with great care, especially as ramping colours by specifying more than a palette's length is probably in violation of said guidelines. However, if you are producing internal reports for Edinburgh, you may find this package useful. 
 
 
 With thanks to [Simon J's post on writing your own ggplot palette](https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2).
@@ -25,14 +25,39 @@ library(UoEColouR)
 library(ggplot2)
 ```
 
-You can browse a list of the Edinburgh colours with their approximate names (I have added a precursor to all names to indicate the first palette it belongs to)
+
+
+The Edinburgh palettes are:
 
 ```{r}
-ed_colours
+
+
+uoe_show_palette("core")
+uoe_show_palette("bright")
+uoe_show_palette("bright-two-tone")
+uoe_show_palette("muted")
+uoe_show_palette("muted-two-tone")
+uoe_show_palette("digital")
+uoe_show_palette("recruit-ug")
+uoe_show_palette("recruit-pg")
+uoe_show_palette("recruit-ug-core")
+uoe_show_palette("recruit-pg-core")
+
+
 ```
 
 
-And then you can use the `scale_uoe` function with `ggplot2`
+Palettes can be utilised like so:
+
+```{r}
+
+image(volcano, col = ed_col("bright", 20))
+
+```
+
+
+
+And then you can use the `scale_uoe` function with `ggplot2`:
 
 ```{r}
 
