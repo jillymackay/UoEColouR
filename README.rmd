@@ -14,7 +14,19 @@ A package of University of Edinburgh branded colours
 Edinburgh brand colours taken from our [Sharepoint](https://uoe.sharepoint.com/sites/Brand/SitePages/Colours.aspx). I encourage any users to thoroughly read and understand brand guidance prior to utilising Edinburgh colours. Namely, utilise these colours with great care, especially as ramping colours by specifying more than a palette's length is probably in violation of said guidelines. However, if you are producing internal reports for Edinburgh, you may find this package useful. 
 
 
-With thanks to [Simon J's post on writing your own ggplot palette](https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2).
+With thanks to [Simon J's post on writing your own ggplot palette](https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2) and [@jkaupp's nord package](https://github.com/jkaupp/nord) for a lot of inspiration. 
+
+I've also [blogged about this - because I refuse to have to remember how to do any of it later](https://jillymackay.com/post/ggplot2-palettes-tutorial/).
+
+
+## Install
+
+```{r, eval = FALSE}
+
+devtools::install_github("jillymackay/UoEColouR")
+
+```
+
 
 
 

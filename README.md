@@ -17,7 +17,19 @@ if you are producing internal reports for Edinburgh, you may find this
 package useful.
 
 With thanks to [Simon J’s post on writing your own ggplot
-palette](https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2).
+palette](https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2)
+and [@jkaupp’s nord package](https://github.com/jkaupp/nord) for a lot
+of inspiration.
+
+I’ve also [blogged about this - because I refuse to have to remember how
+to do any of it
+later](https://jillymackay.com/post/ggplot2-palettes-tutorial/).
+
+## Install
+
+``` r
+devtools::install_github("jillymackay/UoEColouR")
+```
 
 ## Examples
 
@@ -32,61 +44,61 @@ The Edinburgh palettes are:
 uoe_show_palette("core")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ``` r
 uoe_show_palette("bright")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->
 
 ``` r
 uoe_show_palette("bright-two-tone")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-3.png)<!-- -->
 
 ``` r
 uoe_show_palette("muted")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-4.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-4.png)<!-- -->
 
 ``` r
 uoe_show_palette("muted-two-tone")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-5.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-5.png)<!-- -->
 
 ``` r
 uoe_show_palette("digital")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-6.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-6.png)<!-- -->
 
 ``` r
 uoe_show_palette("recruit-ug")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-7.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-7.png)<!-- -->
 
 ``` r
 uoe_show_palette("recruit-pg")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-8.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-8.png)<!-- -->
 
 ``` r
 uoe_show_palette("recruit-ug-core")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-9.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-9.png)<!-- -->
 
 ``` r
 uoe_show_palette("recruit-pg-core")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-10.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-10.png)<!-- -->
 
 Palettes can be utilised like so:
 
@@ -94,7 +106,7 @@ Palettes can be utilised like so:
 image(volcano, col = ed_col("bright", 20))
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 And then you can use the `scale_uoe` function with `ggplot2`:
 
@@ -104,7 +116,7 @@ ggplot(aes(x = hwy, y = cty, colour = manufacturer ), data = mpg) +
   scale_colour_uoe()
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 ggplot(aes(x = hwy, y = cty, colour = manufacturer ), data = mpg) +
@@ -112,7 +124,7 @@ ggplot(aes(x = hwy, y = cty, colour = manufacturer ), data = mpg) +
   scale_colour_uoe(palette = "muted")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
 
 ``` r
 ggplot(aes(x = manufacturer, fill = manufacturer), data = mpg) +
@@ -120,7 +132,7 @@ ggplot(aes(x = manufacturer, fill = manufacturer), data = mpg) +
   scale_fill_uoe()
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-3.png)<!-- -->
 
 ``` r
 ggplot(aes(x = manufacturer, fill = manufacturer), data = mpg) +
@@ -128,4 +140,4 @@ ggplot(aes(x = manufacturer, fill = manufacturer), data = mpg) +
   scale_fill_uoe(palette = "muted")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-4.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-4.png)<!-- -->

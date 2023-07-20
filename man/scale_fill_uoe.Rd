@@ -33,5 +33,5 @@ library(UoEColouR)
 
 ggplot(aes(x = manufacturer, fill = manufacturer), data = mpg) +
   geom_bar() +
-  scale_fill_uoe()ggplot(diamonds)
+  scale_fill_uoe()
 }

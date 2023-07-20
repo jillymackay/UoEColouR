@@ -114,7 +114,7 @@ scale_colour_uoe <- function(palette = "bright", discrete = TRUE, alpha = 1, rev
 #'
 #' ggplot(aes(x = manufacturer, fill = manufacturer), data = mpg) +
 #'   geom_bar() +
-#'   scale_fill_uoe()ggplot(diamonds)
+#'   scale_fill_uoe()
 #' @export
 #'
 
