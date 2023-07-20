@@ -10,66 +10,74 @@
 #'   scale_colour_uoe()
 #'
 #'
-#' @export
-
-
-
-ed_colours <- c(
-  "university red" = "#D50032",
-  "university blue" = "#041E42",
-  "bright pink" = "#D0006F",
-  "bright orange" = "#C25E03",
-  "bright yellow" = "#F9A800",
-  "bright green" = "#61BF1A",
-  "bright red"  = "#AD033B",
-  "bright blue" = "#29C2DE",
-  "bright blue blue" = "#0099AB",
-  "bright purple" = "#830065",
-  "muted brown" = "#704F45",
-  "muted turquoise" = "#46877F",
-  "muted green" = "#154734",
-  "muted red brown" = "#692E1f",
-  "muted light blue" = "#c6dbe9",
-  "muted pink" = "#BA8285",
-  "muted yellow" = "#949108",
-  "muted blue" = "#004F71",
-  "digital bright blue" = "#007288",
-  "digital burgandy" = "#A50034",
-  "digital jade" = "#487a7b",
-  "digital muted brown" = "#6D4F47",
-  "digital spruce grey" = "#333F48",
-  "recruit pg blue" = "#004F71",
-  "recruit pg teal" = "#4a7875"
-
-)
-
-
-#' uoe_colour
-#' Extracts hex codes from the list of UoE brand colours. Helper function for uoe_pal()
-#'
-#' @param ... Character names of the UoE brand colours
 #'
 
 
-uoe_colour <- function(...) {
-  cols <- c(...)
-
-  if (is.null(cols))
-    return (ed_colours)
-
-  ed_colours[cols]
-}
 
 
+ed_palettes <- list(#Edinburgh University Brand Colour Palettes
+  "core" = c("#D50032",
+             "#041E42"),
+  "bright" = c("#830065",
+               "#d0006f",
+               "#ad033b",
+               "#c25e03",
+               "#f9a800",
+               "#61bf1a",
+               "#0099ab",
+               "#29c2de"),
+  # A selection of the bright palette intended to work for dichotomous scales
+  "bright-two-tone" = c("#830065",
+                        "#d0006f",
+                        "#f9a800",
+                        "#0099ab",
+                        "#29c2de"),
+  # Note the muted palette is not great for colour blind folk
+  "muted" = c("#154734",
+              "#004f71",
+              "#46877f",
+              "#c6dbe9",
+              "#949108",
+              "#ba8285",
+              "#704f45",
+              "#692e1f"),
+  # A selection of the muted palette intended to work for dichotomous scales
+  "muted-two-tone"= c("#004f71",
+                      "#c6dbe9",
+                      "#949108",
+                      "#ba8285",
+                      "#692e1f"),
+  # Colours optimised for online display per brand guidelines, some poor colourblind choices
+  "digital" = c("#a50034",
+                "#d0006f",
+                "#830065",
+                "#6d4f47",
+                "#007288",
+                "#154734",
+                "#333f48",
+                "#487a7b",
+                "#004f71"),
+  # Recruitment colours
+  "recruit-ug" = c("#c25e03",
+                   "#f9a800",
+                   "#61bf1a"),
+  "recruit-pg" = c("#830065",
+                   "#4a7875",
+                   "#c6dbe9"),
+  # Recruitment branding with core colours, use with caution, core colours are valuable
+  "recuit-ug-core" = c("#d50032",
+                  "#c25e03",
+                  "#61bf1a",
+                  "#f9a800",
+                  "#041e42"),
+  "recruit-pg-core" = c("#d50032",
+                         "#830065",
+                         "#4a7875",
+                         "#c6dbe9",
+                         "#041e42")
 
-ed_palettes <- list(
-  `core` = uoe_colour("university red", "university blue"),
-  `bright` = uoe_colour("bright pink", "bright orange", "bright yellow", "bright green", "bright red", "bright blue", "bright blue blue", "bright purple"),
-  `muted` = uoe_colour("muted brown", "muted turquoise", "muted green", "muted red brown", "muted light blue", "muted pink", "muted yellow", "muted blue"),
-  `digitalall` = uoe_colour("university red", "university blue", "digital bright blue", "bright pink", "bright purple", "digital burgandy", "muted green", "digital jade", "muted blue", "digital muted brown", "digital spruce grey"),
-  `digital` = uoe_colour("digital bright blue", "bright pink", "bright purple", "digital burgandy", "muted green", "digital jade", "muted blue", "digital muted brown", "digital spruce grey"),
-  `recruitall` = uoe_colour("university red", "recruit pg blue", "university blue", "bright orange", "bright yellow", "bright green", "bright purple", "muted light blue", "recruit pg teal"),
-  `recruitug` = uoe_colour("university red", "university blue", "bright orange", "bright yellow", "bright green"),
-  `recruitpg` = uoe_colour("recruit pg blue", "university blue", "bright purple", "muted light blue", "recruit pg teal")
 
-)
+
+
+
+  )

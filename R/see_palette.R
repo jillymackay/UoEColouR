@@ -12,7 +12,7 @@
 #' @param ttl character, title to be displayed (the name of the palette)
 #' @param num numeric, the number of colours to display
 #' @examples
-#' viz_palette(ochre_palettes$namatjira_qual)
+#' see_palette("bright-two-tone")
 #' viz_palette(ochre_palettes$namatjira_qual, "namatjira_qual")
 #' viz_palette(ochre_palettes$namatjira_qual, "namatjira_qual first 4", num = 4)
 #' viz_palette(ochre_palettes$namatjira_qual, "namatjira_qual interpolated to 25", num = 25)
@@ -26,7 +26,7 @@
 see_palette <- function(pal, ttl = deparse(substitute(pal)), num = length(pal)) {
   if(num <= 0)
     stop("'num' should be > 0")
-  pal_func <- colorRampPalette(pal)
+  pal_func <- uoe_pal(pal)
   image(seq_len(num), 1, as.matrix(seq_len(num)), col = pal_func(num),
         main = paste0(ttl, " (", length(pal), " colours in palette, ", num, " displayed)"),
         xlab = "", ylab = "", xaxt = "n", yaxt = "n",  bty = "n")
